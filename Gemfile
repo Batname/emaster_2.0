@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
 
-gem 'rails', '4.0.0'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.1.5'
+# Use postgresql as the database for Active Record
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -22,9 +23,18 @@ end
 
 group :production do
   gem 'shelly-dependencies'
+  # gem for heroku
+  gem 'rails_12factor'
 end
 
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl'
 end
+
+# Создание записей в базе данных
+gem 'faker', '1.1.2'
+
+# Плагин для загрузки файлов
+# https://github.com/thoughtbot/paperclip
+gem 'paperclip'
